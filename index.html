@@ -4,1131 +4,1223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Junaid Sports Phalia | Play to Win</title>
-<meta name="description" content="Shop sports equipment at Junaid Sports Phalia. Order through WhatsApp.">
+<title>Junaid Sports Phalia | Sports Store</title>
+<meta name="description" content="Visit Junaid Sports Phalia for sports equipment, cricket accessories, footballs, fitness products and more. Order easily through WhatsApp.">
 
 <style>
 :root {
-    --blue: #0759c7;
-    --dark: #061a35;
-    --light: #f3f7ff;
-    --white: #ffffff;
+  --green: #075b36;
+  --dark-green: #023b25;
+  --light-green: #18a558;
+  --white: #ffffff;
+  --red: #e63946;
+  --text: #182b22;
+  --light: #f2f8f4;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--light);
-    color: #172337;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #f3faf5, #ffffff, #edf7f0);
+  line-height: 1.6;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
 }
 
-button {
-    font: inherit;
-    cursor: pointer;
+button, a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* COLORFUL TOP LINE */
-
-.topbar {
-    background: linear-gradient(90deg, #071746, #0759c7, #00b7ff, #0759c7, #071746);
-    color: white;
-    text-align: center;
-    padding: 9px 12px;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
+/* TOP ANNOUNCEMENT BAR */
+.top-bar {
+  padding: 8px 15px;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #014421, #087b43, #014421);
 }
 
-/* COLORFUL NAVIGATION HEADER */
-
+/* PROFESSIONAL GREEN AND WHITE STADIUM HEADER */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: linear-gradient(110deg, #06295f, #0759c7, #087cf0, #063d91);
-    border-bottom: 3px solid #52d5ff;
-    box-shadow: 0 5px 18px rgba(0, 30, 100, .3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 48, 29, 0.96) 0%,
+      rgba(0, 100, 55, 0.90) 35%,
+      rgba(0, 62, 37, 0.82) 100%
+    ),
+    url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=2000&q=85");
+  background-position: center 48%;
+  background-size: cover;
+  border-bottom: 4px solid #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 50, 25, 0.24);
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(255,255,255,0.10),
+      transparent 35%,
+      rgba(0,0,0,0.15)
+    );
 }
 
 .navbar {
-    max-width: 1300px;
-    min-height: 95px;
-    margin: auto;
-    padding: 10px 22px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  position: relative;
+  z-index: 1;
+  max-width: 1450px;
+  min-height: 92px;
+  margin: auto;
+  padding: 15px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
 
-/* BIGGER LOGO */
-
-.logo {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.logo img {
-    width: 225px;
-    height: 78px;
-    object-fit: contain;
-    display: block;
-
-    /* Helps blend a white logo background into the blue header */
-    mix-blend-mode: screen;
-    background: transparent;
+.brand {
+  display: none;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 19px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 27px;
 }
 
 .nav-links a {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 9px 0;
-    border-bottom: 2px solid transparent;
-    transition: .2s;
+  color: white;
+  font-size: 16px;
+  font-weight: 750;
+  transition: color 0.25s, transform 0.25s;
 }
 
 .nav-links a:hover {
-    color: #9ceaff;
-    border-bottom-color: #9ceaff;
+  color: #c8ffda;
+  transform: translateY(-2px);
 }
 
-.nav-order {
-    background: linear-gradient(135deg, #00c6ff, #67e8ff);
-    color: #06234d;
-    padding: 11px 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 13px;
-    white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(0,0,0,.18);
+.nav-links .contact-link {
+  margin-left: 15px;
+  padding: 13px 23px;
+  color: #063d27;
+  background: linear-gradient(135deg, #ffffff, #caffdc);
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.18);
 }
 
-.nav-order:hover {
-    background: white;
+.nav-links .contact-link:hover {
+  color: white;
+  background: #e63946;
 }
 
-/* WELCOME BOX */
+/* COMMON SECTION STYLING */
+section {
+  padding: 65px 22px;
+}
 
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.25;
+  font-weight: 900;
+  color: var(--green);
+}
+
+.section-title p {
+  margin-top: 10px;
+  color: #64746a;
+}
+
+.title-line {
+  width: 75px;
+  height: 5px;
+  margin: 13px auto 0;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #087b43, #ffffff, #e63946);
+}
+
+/* HERO SECTION */
 .hero {
-    min-height: 440px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 55px 20px;
-    color: white;
-    background-color: #064ca8;
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0,20,55,.70),
-            rgba(0,47,110,.45),
-            rgba(0,20,55,.70)
-        ),
-        url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 75px 22px;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(0, 35, 20, 0.91),
+      rgba(0, 91, 49, 0.70),
+      rgba(0, 30, 20, 0.82)
+    ),
+    url("background.jpg") center/cover no-repeat;
 }
 
 .hero-content {
-    width: 100%;
-    max-width: 900px;
+  max-width: 850px;
 }
 
-.hero-tag {
-    display: inline-block;
-    border: 1px solid rgba(255,255,255,.65);
-    background: rgba(0,30,75,.45);
-    padding: 7px 17px;
-    border-radius: 30px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.hero-badge {
+  display: inline-block;
+  padding: 7px 17px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 50px;
+  background: rgba(255,255,255,0.12);
+  color: #e2ffe9;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 7vw, 76px);
-    line-height: 1.08;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-shadow: 0 4px 15px rgba(0,0,0,.4);
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 900;
+  line-height: 1.1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.35);
 }
 
 .hero h1 span {
-    display: block;
-    color: #70c6ff;
-}
-
-.hero h2 {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 8px 28px;
-    border: 2px solid #39baff;
-    background: rgba(0,85,210,.75);
-    font-size: clamp(20px, 3vw, 32px);
-    letter-spacing: 5px;
-    font-style: italic;
+  color: #aaffc5;
 }
 
 .hero p {
-    margin: 20px auto 25px;
-    max-width: 620px;
-    font-size: 16px;
-    color: #f0f6ff;
+  max-width: 680px;
+  margin: 22px auto 28px;
+  color: #f1fff5;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 13px 24px;
-    border-radius: 7px;
-    font-weight: bold;
-    transition: transform .2s, background .2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
-.btn:hover { transform: translateY(-2px); }
-
-.btn-primary {
-    background: #0875f5;
-    color: white;
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.20);
 }
 
-.btn-outline {
-    border: 2px solid white;
-    color: white;
-    margin-left: 10px;
+.btn-green {
+  background: linear-gradient(135deg, #18a558, #076b39);
+  color: white;
+}
+
+.btn-white {
+  background: white;
+  color: var(--green);
 }
 
 /* BENEFITS */
-
 .benefits {
-    background: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1150px;
-    margin: 28px auto;
-    border-radius: 12px;
-    box-shadow: 0 5px 24px rgba(0,0,0,.06);
-    overflow: hidden;
+  padding: 25px 20px;
+  background: linear-gradient(110deg, #e1f8e9, #ffffff, #e8f7ed);
+  border-bottom: 1px solid #d8ecde;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 
 .benefit {
-    padding: 20px 12px;
-    text-align: center;
-    border-right: 1px solid #e8edf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 8px;
 }
 
-.benefit:last-child { border-right: none; }
-.benefit .icon { font-size: 27px; }
-.benefit h3 { font-size: 15px; margin: 4px 0; }
-.benefit p { color: #69758a; font-size: 12px; }
-
-.section {
-    max-width: 1250px;
-    padding: 45px 22px;
-    margin: auto;
+.benefit-icon {
+  font-size: 28px;
 }
 
-.section-heading {
-    text-align: center;
-    margin-bottom: 28px;
+.benefit strong {
+  display: block;
+  color: var(--green);
+  font-size: 14px;
 }
 
-.section-heading h2 {
-    font-size: clamp(25px, 4vw, 36px);
-    color: var(--dark);
-    line-height: 1.25;
+.benefit small {
+  color: #65766b;
+  font-size: 12px;
 }
 
-.section-heading p {
-    color: #69758a;
-    margin-top: 8px;
+/* CATEGORY CARDS */
+.categories-section {
+  background:
+    radial-gradient(circle at top left, #dcf8e5, transparent 38%),
+    linear-gradient(145deg, #f7fcf8, #eaf6ee);
 }
-
-/* CATEGORIES */
 
 .category-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .category-card {
-    background: white;
-    padding: 25px 15px;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid #e8edf5;
-    transition: transform .2s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+  padding: 27px 18px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #087b43, #03482c);
+  border: 1px solid rgba(255,255,255,0.65);
+  box-shadow: 0 10px 25px rgba(0,75,38,0.13);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:nth-child(4n+2) {
+  background: linear-gradient(145deg, #126c9c, #073d60);
+}
+
+.category-card:nth-child(4n+3) {
+  background: linear-gradient(145deg, #e64b4b, #a81727);
+}
+
+.category-card:nth-child(4n+4) {
+  background: linear-gradient(145deg, #167a57, #064630);
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: -45px;
+  top: -45px;
+  border: 20px solid rgba(255,255,255,0.08);
+  border-radius: 50%;
 }
 
 .category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 28px rgba(0,40,100,.10);
+  transform: translateY(-7px);
+  box-shadow: 0 17px 30px rgba(0,75,38,0.22);
 }
 
-.category-icon { font-size: 48px; margin-bottom: 8px; }
-.category-card h3 { font-size: 17px; color: var(--dark); }
-.category-card p { font-size: 13px; color: #69758a; margin-top: 4px; }
+.category-icon {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 48px;
+}
+
+.category-card h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  color: white;
+}
+
+.category-card p {
+  position: relative;
+  z-index: 1;
+  margin-top: 6px;
+  color: #e8fff0;
+  font-size: 13px;
+}
 
 /* PRODUCTS */
-
-.products-section { background: #edf3fc; }
-
-.products-inner {
-    max-width: 1250px;
-    padding: 45px 22px;
-    margin: auto;
+.products-section {
+  background:
+    radial-gradient(circle at 90% 10%, #dff7e8, transparent 25%),
+    linear-gradient(135deg, #ffffff, #f1f7ff, #f2fbf4);
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .product-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #e3eaf5;
-    box-shadow: 0 4px 14px rgba(0,0,0,.035);
-    transition: transform .2s, box-shadow .2s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(150deg, #ffffff, #f2f9f4);
+  border: 1px solid #dcebe0;
+  border-radius: 19px;
+  box-shadow: 0 8px 25px rgba(15,65,35,0.09);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0,0,0,.08);
+  transform: translateY(-7px);
+  box-shadow: 0 17px 35px rgba(15,65,35,0.16);
+  border-color: #85c99c;
 }
 
 .product-image {
-    height: 175px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #e3efff, #f8fbff);
-    font-size: 75px;
+  min-height: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 50% 45%, #ffffff 0%, #e8f7ed 65%, #d5eddd 100%);
 }
 
-.product-info { padding: 16px; }
-.product-info h3 { font-size: 17px; color: var(--dark); }
-.product-info p { font-size: 13px; color: #69758a; margin: 5px 0 13px; }
-
-.product-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
+.product-image span {
+  font-size: 76px;
+  filter: drop-shadow(0 7px 5px rgba(0,0,0,0.10));
+  transition: transform 0.3s;
 }
 
-.price {
-    font-weight: bold;
-    font-size: 13px;
-    color: var(--blue);
+.product-card:hover .product-image span {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.product-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.product-info h3 {
+  color: #123d29;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.product-info p {
+  flex: 1;
+  margin: 9px 0 15px;
+  color: #6a776e;
+  font-size: 13px;
+}
+
+.product-tag {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  padding: 4px 9px;
+  border-radius: 6px;
+  color: #08723b;
+  background: #dff6e7;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .order-btn {
-    border: none;
-    background: #0875f5;
-    color: white;
-    padding: 9px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: bold;
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #168b4c, #056333);
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.25s;
 }
 
-.order-btn:hover { background: #034aa8; }
+.order-btn:hover {
+  background: linear-gradient(135deg, #e63946, #bd1e2d);
+}
 
 /* ABOUT */
+.about-section {
+  background:
+    radial-gradient(circle at 100% 0%, #c9efd5, transparent 35%),
+    linear-gradient(135deg, #e8f7ed, #ffffff, #f3f8ff);
+}
 
 .about-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 35px;
+  padding: 35px;
+  border: 1px solid #d6ebdc;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.84);
+  box-shadow: 0 12px 35px rgba(0,70,35,0.08);
 }
 
-.about-art {
-    min-height: 260px;
-    background: linear-gradient(135deg, #073775, #0875f5);
-    border-radius: 16px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 25px;
+.about-text h3 {
+  margin-bottom: 15px;
+  color: var(--green);
+  font-size: 26px;
 }
 
-.about-art .sports-icons { font-size: 48px; margin-bottom: 15px; }
-.about-art h3 { font-size: 27px; }
-
-.about-text h2 {
-    font-size: 32px;
-    color: var(--dark);
-    line-height: 1.2;
-    margin-bottom: 15px;
+.about-text p {
+  margin-bottom: 12px;
+  color: #56665b;
 }
 
-.about-text p { color: #59677d; margin-bottom: 12px; }
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+}
 
-/* LOCATION CARD, NOW LINKED FROM TOP NAVIGATION */
+.about-feature {
+  padding: 18px 12px;
+  text-align: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e5f8eb, #f5fbff);
+  border: 1px solid #d8ecdf;
+}
 
+.about-feature span {
+  display: block;
+  font-size: 30px;
+}
+
+.about-feature strong {
+  display: block;
+  margin-top: 5px;
+  color: #075b36;
+  font-size: 13px;
+}
+
+/* LOCATION */
 .location-section {
-    background: linear-gradient(135deg, #e5f2ff, #ffffff);
-    padding: 45px 22px;
+  color: white;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(58,190,111,0.25), transparent 32%),
+    linear-gradient(135deg, #023b25, #075b36, #0a7044);
 }
 
-.location-card {
-    max-width: 1050px;
-    margin: auto;
-    padding: 30px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,50,120,.10);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-    border-left: 5px solid #0875f5;
+.location-section .section-title h2 {
+  color: white;
+}
+
+.location-section .section-title p {
+  color: #dcf7e5;
+}
+
+.location-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: center;
 }
 
 .location-info {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.09);
 }
 
-.location-icon {
-    width: 70px;
-    height: 70px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #e5f2ff;
-    border-radius: 50%;
-    font-size: 34px;
-}
-
-.location-info h2 {
-    color: #073775;
-    font-size: 25px;
+.location-info h3 {
+  margin-bottom: 12px;
+  font-size: 23px;
 }
 
 .location-info p {
-    color: #65738a;
-    margin-top: 5px;
+  margin-bottom: 12px;
+  color: #e0f5e7;
 }
 
-.map-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #0759c7, #009dff);
-    color: white;
-    padding: 13px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    white-space: nowrap;
-    text-align: center;
+.location-map {
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  border-radius: 20px;
+  color: #12452b;
+  background:
+    radial-gradient(circle at 50% 40%, #ffffff, #d7f3df);
 }
 
-.map-btn:hover { background: #034aa8; }
+.location-map .map-icon {
+  font-size: 65px;
+}
+
+.location-map h3 {
+  margin: 8px 0;
+  font-size: 23px;
+}
 
 /* CONTACT */
-
 .contact-section {
-    background: #061a35;
-    color: white;
-    text-align: center;
-    padding: 48px 20px;
+  background:
+    radial-gradient(circle at 0% 100%, #d6f4df, transparent 35%),
+    linear-gradient(135deg, #ffffff, #f2f8ff);
 }
 
-.contact-section h2 { font-size: 32px; }
-.contact-section p { color: #d2e0f4; margin: 10px auto 20px; }
-.contact-section .btn { margin: 5px; }
+.contact-box {
+  max-width: 760px;
+  margin: auto;
+  padding: 35px;
+  text-align: center;
+  border: 1px solid #dcebe0;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #ffffff, #eaf8ef);
+  box-shadow: 0 12px 32px rgba(0,70,35,0.09);
+}
+
+.contact-box h3 {
+  margin-bottom: 10px;
+  color: var(--green);
+  font-size: 25px;
+}
+
+.contact-box p {
+  margin-bottom: 22px;
+  color: #64746a;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+}
 
 /* FOOTER */
-
 footer {
-    background: #041124;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
+  padding: 35px 20px;
+  text-align: center;
+  color: white;
+  background:
+    linear-gradient(135deg, #012d1b, #075b36, #01351f);
 }
 
-footer img {
-    width: 175px;
-    height: 70px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 10px;
-    mix-blend-mode: screen;
-    background: transparent;
+footer h3 {
+  margin-bottom: 8px;
+  font-size: 23px;
 }
 
-footer p { font-size: 13px; color: #c4d1e4; }
+footer p {
+  margin: 5px 0;
+  color: #d9f3e2;
+  font-size: 13px;
+}
 
 .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 15px 0;
-    font-size: 13px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 18px 0;
 }
 
-.footer-links a:hover { color: #70c6ff; }
+.footer-links a {
+  color: white;
+  font-size: 13px;
+}
 
-.copyright {
-    border-top: 1px solid #25344a;
-    margin-top: 18px;
-    padding-top: 18px;
+.footer-links a:hover {
+  color: #b8ffce;
 }
 
 /* FLOATING WHATSAPP */
-
 .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 200;
-    background: #20c968;
-    color: white;
-    padding: 13px 17px;
-    border-radius: 50px;
-    box-shadow: 0 5px 18px rgba(0,0,0,.2);
-    font-weight: bold;
-    font-size: 14px;
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  background: #20bd5a;
+  font-size: 30px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.24);
+  transition: transform 0.25s;
 }
 
-/* MOBILE */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
 
+/* RESPONSIVE DESIGN */
 @media (max-width: 950px) {
-    .navbar { flex-wrap: wrap; justify-content: center; }
-    .nav-links { gap: 17px; }
-    .category-grid, .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .benefits { margin: 20px 12px; }
-    .about-box { grid-template-columns: 1fr; }
-    .location-card { align-items: flex-start; flex-direction: column; }
+  .navbar {
+    padding: 17px 18px;
+  }
+
+  .nav-links {
+    gap: 17px;
+  }
+
+  .category-grid,
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-box {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width: 560px) {
-    .navbar { padding: 10px 12px; gap: 10px; }
-    .logo img { width: 175px; height: 65px; }
-    .nav-links { width: 100%; gap: 13px; }
-    .nav-links a { font-size: 12px; }
-    .nav-order { padding: 9px 12px; font-size: 12px; }
+@media (max-width: 600px) {
+  .top-bar {
+    font-size: 11px;
+  }
 
-    .hero { min-height: 390px; padding: 45px 15px; }
-    .hero h1 { letter-spacing: 1px; }
-    .hero h2 { letter-spacing: 3px; padding: 8px 14px; }
-    .hero p { font-size: 14px; }
+  .navbar {
+    min-height: auto;
+    padding: 18px 10px;
+  }
 
-    .btn { padding: 11px 15px; font-size: 13px; }
-    .benefit { padding: 15px 5px; }
-    .benefit h3 { font-size: 12px; }
-    .benefit p { font-size: 10px; }
+  .nav-links {
+    gap: 10px 15px;
+  }
 
-    .category-grid, .product-grid { gap: 12px; }
-    .category-card { padding: 18px 8px; }
-    .category-icon { font-size: 38px; }
-    .category-card h3 { font-size: 14px; }
+  .nav-links a {
+    font-size: 13px;
+  }
 
-    .product-image { height: 125px; font-size: 55px; }
-    .product-info { padding: 12px; }
-    .product-info h3 { font-size: 14px; }
-    .product-info p { font-size: 12px; }
+  .nav-links .contact-link {
+    margin-left: 0;
+    padding: 8px 13px;
+  }
 
-    .product-bottom { align-items: flex-start; flex-direction: column; }
-    .order-btn { width: 100%; }
+  .hero {
+    min-height: 420px;
+    padding: 60px 18px;
+  }
 
-    .section, .products-inner { padding: 32px 14px; }
-    .location-section { padding: 32px 14px; }
-    .location-card { padding: 22px 17px; }
-    .location-info { align-items: flex-start; gap: 12px; }
-    .location-icon { width: 52px; height: 52px; font-size: 27px; }
-    .location-info h2 { font-size: 21px; }
-    .map-btn { width: 100%; }
+  .hero p {
+    font-size: 15px;
+  }
 
-    .whatsapp-float { bottom: 13px; right: 12px; padding: 11px 14px; }
-}
-    
-/* ===== JUNAID SPORTS PHALIA: COLORFUL WEBSITE THEME ===== */
-
-:root {
-  --sports-blue: #073b83;
-  --sports-red: #e63946;
-  --sports-light: #f0f6ff;
-  --sports-dark: #10213a;
-}
-
-/* Main website background */
-body {
-  background: linear-gradient(135deg, #f4f8ff, #ffffff, #fff1f2);
-  color: var(--sports-dark);
-}
-
-/* Section backgrounds */
-section {
-  position: relative;
-  padding-top: 55px;
-  padding-bottom: 55px;
-}
-
-/* Section headings */
-section h2 {
-  color: var(--sports-blue);
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-section h2::after {
-  content: "";
-  display: block;
-  width: 75px;
-  height: 5px;
-  margin: 12px auto 0;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #e63946, #ffb703);
-}
-
-/* Product cards */
-.product-card,
-.product,
-.product-box {
-  background: linear-gradient(145deg, #ffffff, #eaf2ff);
-  border: 1px solid #d5e4ff;
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 8px 22px rgba(7, 59, 131, 0.10);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.product-card:hover,
-.product:hover,
-.product-box:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 15px 30px rgba(7, 59, 131, 0.20);
-  border-color: #e63946;
-}
-
-/* Category cards */
-.category-card,
-.category,
-.category-box {
-  background: linear-gradient(135deg, #073b83, #1976d2);
-  color: #ffffff;
-  border-radius: 18px;
-  padding: 24px 18px;
-  box-shadow: 0 8px 20px rgba(7, 59, 131, 0.18);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.category-card:hover,
-.category:hover,
-.category-box:hover {
-  background: linear-gradient(135deg, #e63946, #ff7043);
-  transform: translateY(-5px);
-}
-
-/* Product and category text */
-.product-card h3,
-.product h3,
-.product-box h3,
-.category-card h3,
-.category h3 {
-  color: var(--sports-blue);
-  font-weight: 750;
-}
-
-.category-card h3,
-.category h3,
-.category-box h3 {
-  color: #ffffff;
-}
-
-/* Buttons */
-button,
-.btn,
-.order-btn,
-a.button {
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #e63946, #c1121f);
-  color: #ffffff;
-  font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-button:hover,
-.btn:hover,
-.order-btn:hover,
-a.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 18px rgba(230, 57, 70, 0.25);
-}
-
-/* About section */
-#about,
-.about-section,
-.about {
-  background: linear-gradient(135deg, #e7f0ff, #ffffff, #ffe9ec);
-  border-radius: 24px;
-  padding: 45px 25px;
-}
-
-/* Location section */
-#location,
-.location-section,
-.location {
-  background: linear-gradient(135deg, #073b83, #145da0);
-  color: #ffffff;
-  border-radius: 22px;
-  padding: 40px 25px;
-}
-
-#location h2,
-.location-section h2,
-.location h2 {
-  color: #ffffff;
-}
-
-/* Contact section */
-#contact,
-.contact-section,
-.contact {
-  background: linear-gradient(135deg, #fff1f2, #f0f6ff);
-  border-radius: 22px;
-  padding: 40px 25px;
-}
-
-/* Product images */
-.product-card img,
-.product img,
-.product-box img {
-  border-radius: 12px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover img,
-.product:hover img,
-.product-box:hover img {
-  transform: scale(1.04);
-}
-
-/* Footer */
-footer {
-  background: linear-gradient(135deg, #081d3b, #073b83);
-  color: #ffffff;
-  padding: 30px 20px;
-}
-
-footer a {
-  color: #ffffff;
-}
-
-/* Responsive spacing */
-@media (max-width: 768px) {
   section {
-    padding: 35px 14px;
+    padding: 45px 15px;
   }
 
-  .product-card,
-  .product,
-  .product-box {
+  .category-grid,
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .category-card {
+    padding: 20px 9px;
+  }
+
+  .category-icon {
+    font-size: 38px;
+  }
+
+  .category-card h3 {
+    font-size: 15px;
+  }
+
+  .product-image {
+    min-height: 120px;
     padding: 12px;
-    border-radius: 14px;
+  }
+
+  .product-image span {
+    font-size: 55px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 14px;
+  }
+
+  .product-info p {
+    font-size: 12px;
+  }
+
+  .benefit-grid {
+    gap: 8px;
+  }
+
+  .benefit {
+    justify-content: flex-start;
+  }
+
+  .benefit-icon {
+    font-size: 23px;
+  }
+
+  .benefit strong {
+    font-size: 12px;
+  }
+
+  .about-box {
+    padding: 20px;
+  }
+
+  .about-features {
+    gap: 8px;
+  }
+
+  .location-box {
+    grid-template-columns: 1fr;
+  }
+
+  .location-info,
+  .contact-box {
+    padding: 23px 17px;
+  }
+
+  .whatsapp-float {
+    width: 53px;
+    height: 53px;
+    right: 15px;
+    bottom: 15px;
   }
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-    🏆 JUNAID SPORTS PHALIA — YOUR GAME, YOUR PASSION, YOUR WIN! ⚽
+<div class="top-bar">
+  🇵🇰 JUNAID SPORTS PHALIA — YOUR SPORTS, YOUR PASSION!
 </div>
 
+<!-- HEADER: NO LOGO, PAKISTAN COLORS + STADIUM BACKGROUND -->
 <header>
-    <nav class="navbar">
+  <nav class="navbar">
+    <div class="brand"></div>
 
-        <a class="logo" href="#home" aria-label="Junaid Sports Home">
-            <img src="logo.jpg" alt="Junaid Sports Phalia Logo">
-        </a>
-
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#categories">Categories</a>
-            <a href="#products">Products</a>
-            <a href="#about">About Us</a>
-            <a href="#location">📍 Location</a>
-        </div>
-
-        <a class="nav-order" href="#contact">Contact Us</a>
-
-    </nav>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#about">About Us</a>
+      <a href="#location">📍 Location</a>
+      <a href="#contact" class="contact-link">Contact Us</a>
+    </div>
+  </nav>
 </header>
 
-<!-- WELCOME BOX WITH background.jpg -->
-
+<!-- HERO -->
 <section class="hero" id="home">
-    <div class="hero-content">
-
-        <div class="hero-tag">WELCOME TO JUNAID SPORTS PHALIA</div>
-
-        <h1>
-            JUNAID
-            <span>SPORTS</span>
-        </h1>
-
-        <h2>PLAY TO WIN</h2>
-
-        <p>
-            Gear up for greatness! Explore sports equipment and
-            accessories for your game. Contact us to check prices
-            and order your favourite sports products.
-        </p>
-
-        <a class="btn btn-primary" href="#products">Explore Products</a>
-        <a class="btn btn-outline" href="#contact">Contact Us</a>
-
+  <div class="hero-content">
+    <div class="hero-badge">🇵🇰 PHALIA'S SPORTS STORE</div>
+    <h1>JUNAID SPORTS<br><span>PHALIA</span></h1>
+    <p>
+      Discover sports equipment and accessories for your game.
+      Quality products for players, teams and sports lovers.
+    </p>
+    <div class="hero-buttons">
+      <a href="#products" class="btn btn-green">Explore Products</a>
+      <a href="#contact" class="btn btn-white">Contact Our Shop</a>
     </div>
+  </div>
 </section>
 
-<!-- BENEFITS -->
-
+<!-- SHOP BENEFITS -->
 <div class="benefits">
+  <div class="container benefit-grid">
     <div class="benefit">
-        <div class="icon">🏆</div>
-        <h3>Sports Essentials</h3>
-        <p>Equipment for your game</p>
+      <span class="benefit-icon">🏏</span>
+      <div><strong>Sports Equipment</strong><small>For your favourite game</small></div>
     </div>
-
     <div class="benefit">
-        <div class="icon">⚽</div>
-        <h3>Multiple Sports</h3>
-        <p>Find your favourite sport</p>
+      <span class="benefit-icon">⚽</span>
+      <div><strong>Multiple Sports</strong><small>Products for every player</small></div>
     </div>
-
     <div class="benefit">
-        <div class="icon">💬</div>
-        <h3>Easy Ordering</h3>
-        <p>Order directly on WhatsApp</p>
+      <span class="benefit-icon">💬</span>
+      <div><strong>Easy WhatsApp Orders</strong><small>Contact us directly</small></div>
     </div>
+    <div class="benefit">
+      <span class="benefit-icon">📍</span>
+      <div><strong>Visit Our Shop</strong><small>Located in Phalia</small></div>
+    </div>
+  </div>
 </div>
 
 <!-- CATEGORIES -->
-
-<section class="section" id="categories">
-    <div class="section-heading">
-        <h2>Shop By Category</h2>
-        <p>Find equipment for your favourite sport.</p>
+<section class="categories-section" id="categories">
+  <div class="container">
+    <div class="section-title">
+      <h2>Shop By Category</h2>
+      <div class="title-line"></div>
+      <p>Find equipment for your favourite sports.</p>
     </div>
 
     <div class="category-grid">
-        <a class="category-card" href="#products">
-            <div class="category-icon">🏏</div>
-            <h3>Cricket</h3>
-            <p>Bats, balls and accessories</p>
-        </a>
+      <a class="category-card" href="#products">
+        <span class="category-icon">🏏</span>
+        <h3>Cricket</h3>
+        <p>Bats, balls and accessories</p>
+      </a>
 
-        <a class="category-card" href="#products">
-            <div class="category-icon">⚽</div>
-            <h3>Football</h3>
-            <p>Football and accessories</p>
-        </a>
+      <a class="category-card" href="#products">
+        <span class="category-icon">⚽</span>
+        <h3>Football</h3>
+        <p>Footballs and accessories</p>
+      </a>
 
-        <a class="category-card" href="#products">
-            <div class="category-icon">🏸</div>
-            <h3>Badminton</h3>
-            <p>Rackets and shuttlecocks</p>
-        </a>
+      <a class="category-card" href="#products">
+        <span class="category-icon">🏸</span>
+        <h3>Badminton</h3>
+        <p>Rackets and shuttlecocks</p>
+      </a>
 
-        <a class="category-card" href="#products">
-            <div class="category-icon">👟</div>
-            <h3>Sports Shoes</h3>
-            <p>Footwear for your game</p>
-        </a>
+      <a class="category-card" href="#products">
+        <span class="category-icon">🏋️</span>
+        <h3>Fitness</h3>
+        <p>Fitness and training gear</p>
+      </a>
+
+      <a class="category-card" href="#products">
+        <span class="category-icon">🏐</span>
+        <h3>Volleyball</h3>
+        <p>Sports balls and equipment</p>
+      </a>
+
+      <a class="category-card" href="#products">
+        <span class="category-icon">👟</span>
+        <h3>Sports Shoes</h3>
+        <p>Footwear for active players</p>
+      </a>
+
+      <a class="category-card" href="#products">
+        <span class="category-icon">🧤</span>
+        <h3>Sports Accessories</h3>
+        <p>Essential playing accessories</p>
+      </a>
+
+      <a class="category-card" href="#products">
+        <span class="category-icon">🎽</span>
+        <h3>Sports Wear</h3>
+        <p>Clothing and team wear</p>
+      </a>
     </div>
+  </div>
 </section>
 
 <!-- PRODUCTS -->
-
 <section class="products-section" id="products">
-    <div class="products-inner">
-        <div class="section-heading">
-            <h2>Popular Sports Products</h2>
-            <p>Choose a product and ask us about its price and availability.</p>
-        </div>
-
-        <div class="product-grid">
-
-            <article class="product-card">
-                <div class="product-image">🏏</div>
-                <div class="product-info">
-                    <h3>Cricket Bat</h3>
-                    <p>For practice and match play.</p>
-                    <div class="product-bottom">
-                        <span class="price">Price on request</span>
-                        <button class="order-btn" onclick="orderProduct('Cricket Bat')">Order Now</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image">🏐</div>
-                <div class="product-info">
-                    <h3>Cricket Ball</h3>
-                    <p>Ask us about available types.</p>
-                    <div class="product-bottom">
-                        <span class="price">Price on request</span>
-                        <button class="order-btn" onclick="orderProduct('Cricket Ball')">Order Now</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image">⚽</div>
-                <div class="product-info">
-                    <h3>Football</h3>
-                    <p>For training and recreational play.</p>
-                    <div class="product-bottom">
-                        <span class="price">Price on request</span>
-                        <button class="order-btn" onclick="orderProduct('Football')">Order Now</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image">🏸</div>
-                <div class="product-info">
-                    <h3>Badminton Racket</h3>
-                    <p>Equipment for badminton players.</p>
-                    <div class="product-bottom">
-                        <span class="price">Price on request</span>
-                        <button class="order-btn" onclick="orderProduct('Badminton Racket')">Order Now</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image">👟</div>
-                <div class="product-info">
-                    <h3>Sports Shoes</h3>
-                    <p>Ask about sizes and styles.</p>
-                    <div class="product-bottom">
-                        <span class="price">Price on request</span>
-                        <button class="order-btn" onclick="orderProduct('Sports Shoes')">Order Now</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image">🧤</div>
-                <div class="product-info">
-                    <h3>Cricket Gloves</h3>
-                    <p>Cricket protective accessories.</p>
-                    <div class="product-bottom">
-                        <span class="price">Price on request</span>
-                        <button class="order-btn" onclick="orderProduct('Cricket Gloves')">Order Now</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image">🎾</div>
-                <div class="product-info">
-                    <h3>Tennis Equipment</h3>
-                    <p>Ask about rackets and balls.</p>
-                    <div class="product-bottom">
-                        <span class="price">Price on request</span>
-                        <button class="order-btn" onclick="orderProduct('Tennis Equipment')">Order Now</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image">🏋️</div>
-                <div class="product-info">
-                    <h3>Fitness Equipment</h3>
-                    <p>Equipment for your workout.</p>
-                    <div class="product-bottom">
-                        <span class="price">Price on request</span>
-                        <button class="order-btn" onclick="orderProduct('Fitness Equipment')">Order Now</button>
-                    </div>
-                </div>
-            </article>
-
-        </div>
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Products</h2>
+      <div class="title-line"></div>
+      <p>Contact us on WhatsApp for prices and availability.</p>
     </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-image"><span>🏏</span></div>
+        <div class="product-info">
+          <span class="product-tag">CRICKET</span>
+          <h3>Cricket Bat</h3>
+          <p>Cricket bats for practice and match play.</p>
+          <a class="order-btn" href="#" onclick="orderProduct('Cricket Bat');return false;">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image"><span>🔴</span></div>
+        <div class="product-info">
+          <span class="product-tag">CRICKET</span>
+          <h3>Cricket Ball</h3>
+          <p>Cricket balls for training and games.</p>
+          <a class="order-btn" href="#" onclick="orderProduct('Cricket Ball');return false;">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image"><span>⚽</span></div>
+        <div class="product-info">
+          <span class="product-tag">FOOTBALL</span>
+          <h3>Football</h3>
+          <p>Football for training and recreational play.</p>
+          <a class="order-btn" href="#" onclick="orderProduct('Football');return false;">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image"><span>🏸</span></div>
+        <div class="product-info">
+          <span class="product-tag">BADMINTON</span>
+          <h3>Badminton Racket</h3>
+          <p>Rackets for beginners and regular players.</p>
+          <a class="order-btn" href="#" onclick="orderProduct('Badminton Racket');return false;">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image"><span>🏐</span></div>
+        <div class="product-info">
+          <span class="product-tag">VOLLEYBALL</span>
+          <h3>Volleyball</h3>
+          <p>Volleyball equipment for practice and matches.</p>
+          <a class="order-btn" href="#" onclick="orderProduct('Volleyball');return false;">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image"><span>👟</span></div>
+        <div class="product-info">
+          <span class="product-tag">FOOTWEAR</span>
+          <h3>Sports Shoes</h3>
+          <p>Sports footwear for different activities.</p>
+          <a class="order-btn" href="#" onclick="orderProduct('Sports Shoes');return false;">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image"><span>🧤</span></div>
+        <div class="product-info">
+          <span class="product-tag">ACCESSORIES</span>
+          <h3>Sports Gloves</h3>
+          <p>Gloves and other sports accessories.</p>
+          <a class="order-btn" href="#" onclick="orderProduct('Sports Gloves');return false;">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image"><span>🎽</span></div>
+        <div class="product-info">
+          <span class="product-tag">SPORTS WEAR</span>
+          <h3>Sports Clothing</h3>
+          <p>Sportswear for training and team activities.</p>
+          <a class="order-btn" href="#" onclick="orderProduct('Sports Clothing');return false;">Order on WhatsApp</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT US -->
-
-<section class="section" id="about">
-    <div class="about-box">
-
-        <div class="about-art">
-            <div class="sports-icons">🏏 ⚽ 🏸</div>
-            <h3>JUNAID SPORTS</h3>
-            <p>PLAY TO WIN</p>
-        </div>
-
-        <div class="about-text">
-            <h2>Your Sports Shop in Phalia</h2>
-            <p>
-                Welcome to Junaid Sports Phalia, your destination
-                for sports equipment and accessories.
-            </p>
-            <p>
-                Whether you enjoy cricket, football, badminton
-                or fitness, contact us to ask about our products
-                and find the right equipment for your game.
-            </p>
-            <p>
-                Browse our products and order conveniently through
-                WhatsApp.
-            </p>
-            <a class="btn btn-primary" href="#contact">Get In Touch</a>
-        </div>
-
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About Us</h2>
+      <div class="title-line"></div>
+      <p>Serving sports lovers in Phalia.</p>
     </div>
+
+    <div class="about-box">
+      <div class="about-text">
+        <h3>Welcome to Junaid Sports Phalia</h3>
+        <p>
+          Junaid Sports Phalia is your local destination for sports
+          equipment and accessories. We aim to help players and sports
+          enthusiasts find the equipment they need for their favourite games.
+        </p>
+        <p>
+          Browse our product selection and contact us through WhatsApp
+          to ask about prices, available items and ordering.
+        </p>
+        <a class="btn btn-green" href="#contact">Get In Touch</a>
+      </div>
+
+      <div class="about-features">
+        <div class="about-feature">
+          <span>🏏</span>
+          <strong>Cricket Gear</strong>
+        </div>
+        <div class="about-feature">
+          <span>⚽</span>
+          <strong>Team Sports</strong>
+        </div>
+        <div class="about-feature">
+          <span>💬</span>
+          <strong>Direct Contact</strong>
+        </div>
+        <div class="about-feature">
+          <span>🇵🇰</span>
+          <strong>Phalia, Pakistan</strong>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- LOCATION: LINKED IN TOP NAVIGATION -->
-
+<!-- LOCATION -->
 <section class="location-section" id="location">
-    <div class="location-card">
-
-        <div class="location-info">
-            <div class="location-icon">📍</div>
-            <div>
-                <h2>Visit Junaid Sports Phalia</h2>
-                <p>
-                    Find our shop in Phalia, Punjab, Pakistan.
-                    Open Google Maps to view the search results
-                    and select the correct shop location.
-                </p>
-            </div>
-        </div>
-
-        <a class="map-btn"
-           href="https://www.google.com/maps/search/?api=1&query=Junaid+Sports+Phalia+Punjab+Pakistan"
-           target="_blank"
-           rel="noopener noreferrer">
-           📍 Open Google Maps
-        </a>
-
+  <div class="container">
+    <div class="section-title">
+      <h2>Visit Our Location</h2>
+      <div class="title-line"></div>
+      <p>Find Junaid Sports Phalia on Google Maps.</p>
     </div>
+
+    <div class="location-box">
+      <div class="location-info">
+        <h3>📍 Junaid Sports Phalia</h3>
+        <p><strong>City:</strong> Phalia, Punjab, Pakistan</p>
+        <p>Use Google Maps to find the shop and check directions before visiting.</p>
+        <a
+          class="btn btn-white"
+          href="https://www.google.com/maps/search/?api=1&query=Junaid+Sports+Phalia+Punjab+Pakistan"
+          target="_blank"
+          rel="noopener noreferrer">
+          Open Google Maps
+        </a>
+      </div>
+
+      <div class="location-map">
+        <span class="map-icon">📍</span>
+        <h3>Junaid Sports Phalia</h3>
+        <p>Phalia, Punjab, Pakistan</p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Junaid+Sports+Phalia+Punjab+Pakistan"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-green"
+          style="margin-top:15px;">
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-
 <section class="contact-section" id="contact">
-    <h2>Ready to Play to Win?</h2>
-    <p>
-        Contact Junaid Sports Phalia to ask about products,
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <div class="title-line"></div>
+      <p>Have a question about a product? Send us a message.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Let's Talk Sports!</h3>
+      <p>
+        Contact Junaid Sports Phalia on WhatsApp to ask about products,
         prices and availability.
-    </p>
+      </p>
 
-    <a class="btn btn-primary"
-       href="https://wa.me/923435651255?text=Hello%20Junaid%20Sports%20Phalia!%20I%20want%20to%20ask%20about%20your%20sports%20products."
-       target="_blank"
-       rel="noopener noreferrer">
-       Chat on WhatsApp
-    </a>
+      <div class="contact-actions">
+        <a
+          class="btn btn-green"
+          href="https://wa.me/923435651255"
+          target="_blank"
+          rel="noopener noreferrer">
+          💬 Chat on WhatsApp
+        </a>
 
-    <p>WhatsApp: +92 343 5651255</p>
+        <a
+          class="btn btn-white"
+          href="https://www.google.com/maps/search/?api=1&query=Junaid+Sports+Phalia+Punjab+Pakistan"
+          target="_blank"
+          rel="noopener noreferrer">
+          📍 Find Our Shop
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-    <a href="#home">
-        <img src="logo.jpg" alt="Junaid Sports Logo">
-    </a>
+  <h3>JUNAID SPORTS PHALIA</h3>
+  <p>Your Sports, Your Passion 🇵🇰</p>
 
-    <p>Junaid Sports Phalia</p>
-    <p>PLAY TO WIN</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+    <a href="#about">About Us</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-    <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#products">Products</a>
-        <a href="#about">About Us</a>
-        <a href="#location">Location</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <p>
-        <a href="https://www.google.com/maps/search/?api=1&query=Junaid+Sports+Phalia+Punjab+Pakistan"
-           target="_blank" rel="noopener noreferrer">
-           📍 Find Us on Google Maps
-        </a>
-    </p>
-
-    <div class="copyright">
-        <p>© <span id="year"></span> Junaid Sports Phalia. All rights reserved.</p>
-    </div>
+  <p>WhatsApp: +92 343 5651255</p>
+  <p>© <span id="year"></span> Junaid Sports Phalia. All rights reserved.</p>
 </footer>
 
 <!-- FLOATING WHATSAPP BUTTON -->
-
-<a class="whatsapp-float"
-   href="https://wa.me/923435651255?text=Hello%20Junaid%20Sports%20Phalia!"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Chat with Junaid Sports on WhatsApp">
-   💬 WhatsApp Chat
+<a
+  class="whatsapp-float"
+  href="https://wa.me/923435651255"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contact Junaid Sports Phalia on WhatsApp">
+  ☎
 </a>
 
 <script>
+const WHATSAPP_NUMBER = "923435651255";
+
 function orderProduct(productName) {
-    const message =
-        "Hello Junaid Sports Phalia! I am interested in: " +
-        productName +
-        ". Please tell me the price and availability.";
+  const message =
+    "Assalam-o-Alaikum! I am interested in " +
+    productName +
+    " from Junaid Sports Phalia. Please share the price and availability.";
 
-    const whatsappURL =
-        "https://wa.me/923435651255?text=" +
-        encodeURIComponent(message);
+  const whatsappURL =
+    "https://wa.me/" +
+    WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(message);
 
-    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+  window.open(whatsappURL, "_blank", "noopener,noreferrer");
 }
 
 document.getElementById("year").textContent =
-    new Date().getFullYear();
+  new Date().getFullYear();
 </script>
 
 </body>
