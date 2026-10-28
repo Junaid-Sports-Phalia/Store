@@ -578,6 +578,199 @@ footer p { font-size: 13px; color: #c4d1e4; }
 
     .whatsapp-float { bottom: 13px; right: 12px; padding: 11px 14px; }
 }
+    
+/* ===== JUNAID SPORTS PHALIA: COLORFUL WEBSITE THEME ===== */
+
+:root {
+  --sports-blue: #073b83;
+  --sports-red: #e63946;
+  --sports-light: #f0f6ff;
+  --sports-dark: #10213a;
+}
+
+/* Main website background */
+body {
+  background: linear-gradient(135deg, #f4f8ff, #ffffff, #fff1f2);
+  color: var(--sports-dark);
+}
+
+/* Section backgrounds */
+section {
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+/* Section headings */
+section h2 {
+  color: var(--sports-blue);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 5px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #e63946, #ffb703);
+}
+
+/* Product cards */
+.product-card,
+.product,
+.product-box {
+  background: linear-gradient(145deg, #ffffff, #eaf2ff);
+  border: 1px solid #d5e4ff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 22px rgba(7, 59, 131, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover,
+.product:hover,
+.product-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(7, 59, 131, 0.20);
+  border-color: #e63946;
+}
+
+/* Category cards */
+.category-card,
+.category,
+.category-box {
+  background: linear-gradient(135deg, #073b83, #1976d2);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 24px 18px;
+  box-shadow: 0 8px 20px rgba(7, 59, 131, 0.18);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.category-card:hover,
+.category:hover,
+.category-box:hover {
+  background: linear-gradient(135deg, #e63946, #ff7043);
+  transform: translateY(-5px);
+}
+
+/* Product and category text */
+.product-card h3,
+.product h3,
+.product-box h3,
+.category-card h3,
+.category h3 {
+  color: var(--sports-blue);
+  font-weight: 750;
+}
+
+.category-card h3,
+.category h3,
+.category-box h3 {
+  color: #ffffff;
+}
+
+/* Buttons */
+button,
+.btn,
+.order-btn,
+a.button {
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e63946, #c1121f);
+  color: #ffffff;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+.order-btn:hover,
+a.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(230, 57, 70, 0.25);
+}
+
+/* About section */
+#about,
+.about-section,
+.about {
+  background: linear-gradient(135deg, #e7f0ff, #ffffff, #ffe9ec);
+  border-radius: 24px;
+  padding: 45px 25px;
+}
+
+/* Location section */
+#location,
+.location-section,
+.location {
+  background: linear-gradient(135deg, #073b83, #145da0);
+  color: #ffffff;
+  border-radius: 22px;
+  padding: 40px 25px;
+}
+
+#location h2,
+.location-section h2,
+.location h2 {
+  color: #ffffff;
+}
+
+/* Contact section */
+#contact,
+.contact-section,
+.contact {
+  background: linear-gradient(135deg, #fff1f2, #f0f6ff);
+  border-radius: 22px;
+  padding: 40px 25px;
+}
+
+/* Product images */
+.product-card img,
+.product img,
+.product-box img {
+  border-radius: 12px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img,
+.product:hover img,
+.product-box:hover img {
+  transform: scale(1.04);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #081d3b, #073b83);
+  color: #ffffff;
+  padding: 30px 20px;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  section {
+    padding: 35px 14px;
+  }
+
+  .product-card,
+  .product,
+  .product-box {
+    padding: 12px;
+    border-radius: 14px;
+  }
+}
+
 </style>
 </head>
 
