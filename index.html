@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Junaid Sports Phalia - Sports equipment, cricket, football, shoes and accessories. Order on WhatsApp.">
+<meta name="theme-color" content="#071a30">
+<meta name="description" content="Junaid Sports Phalia - Shop sports equipment, cricket gear, footballs, shoes and accessories.">
 <title>Junaid Sports Phalia | Sports Store</title>
 
 <style>
@@ -16,43 +17,72 @@
   --light: #f3f7fc;
   --text: #10233b;
 }
+
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background: var(--light);
 }
-a { text-decoration: none; }
-.container { width: 92%; max-width: 1150px; margin: auto; }
 
+a { text-decoration: none; }
+
+.container {
+  width: 92%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* HEADER */
 header {
   background: var(--navy);
   color: white;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
+  box-shadow: 0 4px 18px #0002;
 }
+
 .nav {
-  min-height: 75px;
+  min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 16px;
 }
-.logo { font-size: 21px; font-weight: 900; }
-.logo span { color: var(--cyan); }
-.logo small {
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 180px;
+  height: 58px;
+  object-fit: contain;
   display: block;
-  text-align: center;
-  font-size: 11px;
-  letter-spacing: 4px;
 }
-nav { display: flex; gap: 20px; }
-nav a { color: white; font-size: 14px; }
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 nav a:hover { color: var(--cyan); }
 
+/* BUTTONS */
 .btn {
   display: inline-block;
   border: none;
@@ -61,168 +91,347 @@ nav a:hover { color: var(--cyan); }
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  transition: .2s;
 }
-.whatsapp { background: var(--green); color: white; }
-.blue-btn { background: var(--blue); color: white; }
 
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.whatsapp {
+  background: var(--green);
+  color: white;
+}
+
+.blue-btn {
+  background: var(--blue);
+  color: white;
+}
+
+/* HERO */
 .hero {
-  min-height: 440px;
+  min-height: 450px;
   display: flex;
   align-items: center;
   color: white;
   background:
-    linear-gradient(90deg, #06172df5, #0a2949e8 55%, #0a294980),
-    radial-gradient(ellipse at 80% 70%, #237aa8, #0a2949 55%, #06172d);
-  overflow: hidden;
+    linear-gradient(90deg, #06172df5, #0a2949e8 60%, #0a2949aa),
+    radial-gradient(ellipse at 80% 65%, #237aa8, #0a2949 55%, #06172d);
 }
-.hero-content { padding: 65px 0; max-width: 700px; }
+
+.hero-content {
+  padding: 65px 0;
+  max-width: 720px;
+}
+
 .eyebrow {
   color: var(--cyan);
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 3px;
   font-weight: bold;
 }
+
 .hero h1 {
   font-size: clamp(40px, 6vw, 72px);
   line-height: 1;
-  margin: 17px 0;
+  margin: 18px 0;
+  letter-spacing: -1.5px;
 }
+
 .hero h1 span { color: var(--cyan); }
+
 .hero p {
   color: #d9e7f5;
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.8;
   max-width: 570px;
 }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
-.hero-points { color: #c8dced; margin-top: 25px; font-size: 13px; }
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.hero-points {
+  color: #c8dced;
+  margin-top: 25px;
+  font-size: 13px;
+}
+
 .hero-points span { margin-right: 15px; }
 
-section { padding: 52px 0; }
-.section-title { margin-bottom: 25px; }
-.section-title h2 { margin: 0 0 8px; font-size: 31px; color: var(--navy); }
-.section-title p { margin: 0; color: #65778b; }
+/* GENERAL SECTIONS */
+section { padding: 55px 0; }
 
+.section-title { margin-bottom: 25px; }
+
+.section-title h2 {
+  margin: 0 0 9px;
+  font-size: 31px;
+  color: var(--navy);
+}
+
+.section-title p {
+  margin: 0;
+  color: #65778b;
+  line-height: 1.6;
+}
+
+/* CATEGORIES */
 .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  gap: 16px;
 }
+
 .category {
   background: white;
   border: 1px solid #e1e9f2;
-  border-radius: 13px;
-  padding: 20px 12px;
+  border-radius: 14px;
+  padding: 22px 12px;
   text-align: center;
   box-shadow: 0 5px 18px #10233b08;
+  transition: .2s;
 }
-.category .emoji { font-size: 37px; display: block; margin-bottom: 10px; }
-.category strong { display: block; }
-.category small { display: block; color: #65778b; margin-top: 6px; }
 
+.category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #10233b12;
+}
+
+.category .emoji {
+  font-size: 38px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.category strong { display: block; }
+
+.category small {
+  display: block;
+  color: #65778b;
+  margin-top: 7px;
+}
+
+/* PRODUCTS */
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
+
 .product {
   background: white;
   border: 1px solid #e1e9f2;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 7px 22px #10233b0a;
+  transition: .2s;
 }
+
+.product:hover { transform: translateY(-4px); }
+
 .product-image {
-  height: 155px;
+  height: 165px;
   display: grid;
   place-items: center;
   background: linear-gradient(135deg, #e5f3ff, #f7fbff);
   font-size: 70px;
 }
-.product-info { padding: 15px; }
-.product h3 { font-size: 16px; margin: 0 0 9px; }
-.product p { color: #65778b; font-size: 13px; line-height: 1.5; min-height: 38px; }
-.price { color: #087348; font-weight: 900; font-size: 18px; margin: 12px 0; }
-.product .btn { width: 100%; font-size: 13px; padding: 11px 5px; }
 
+.product-info { padding: 16px; }
+
+.product h3 {
+  font-size: 16px;
+  margin: 0 0 9px;
+}
+
+.product p {
+  color: #65778b;
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 40px;
+}
+
+.price {
+  color: #087348;
+  font-weight: 900;
+  font-size: 17px;
+  margin: 13px 0;
+}
+
+.product .btn {
+  width: 100%;
+  font-size: 12px;
+  padding: 12px 5px;
+}
+
+/* WHATSAPP PROMOTION */
 .promo {
   background: linear-gradient(120deg, #0b2c4e, #07578a);
   border-radius: 18px;
-  padding: 32px;
+  padding: 35px;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
 }
-.promo h2 { margin-top: 0; }
-.promo p { color: #d4e6f5; line-height: 1.6; }
 
+.promo h2 {
+  margin-top: 0;
+  font-size: 27px;
+}
+
+.promo p {
+  color: #d4e6f5;
+  line-height: 1.7;
+}
+
+/* ABOUT AND CONTACT */
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 22px;
 }
+
 .info-card {
   background: white;
-  padding: 25px;
+  padding: 27px;
   border: 1px solid #e1e9f2;
   border-radius: 14px;
 }
-.info-card h3 { margin-top: 0; }
-.info-card p { color: #65778b; line-height: 1.7; }
 
+.info-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.info-card p {
+  color: #65778b;
+  line-height: 1.8;
+}
+
+/* FOOTER */
 footer {
   background: var(--navy);
   color: white;
-  padding: 30px 0;
+  padding: 32px 0;
 }
+
 .footer-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
 
+.footer-content p {
+  color: #b7cadd;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* FLOATING WHATSAPP */
 .floating-whatsapp {
   position: fixed;
   right: 18px;
   bottom: 18px;
-  z-index: 20;
-  box-shadow: 0 5px 20px #0003;
+  z-index: 200;
   border-radius: 30px;
+  box-shadow: 0 5px 20px #0003;
 }
 
-@media(max-width: 800px) {
+/* MOBILE RESPONSIVE */
+@media (max-width: 850px) {
   nav { display: none; }
-  .categories { grid-template-columns: repeat(2, 1fr); }
-  .products { grid-template-columns: repeat(2, 1fr); }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
   .info-grid { grid-template-columns: 1fr; }
-  .promo { flex-direction: column; align-items: flex-start; }
+
+  .promo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
-@media(max-width: 460px) {
-  .logo { font-size: 15px; }
-  .nav .btn { padding: 10px; font-size: 12px; }
-  .product-image { height: 120px; font-size: 55px; }
-  .product-info { padding: 11px; }
-  .product h3 { font-size: 14px; }
-  .product p { font-size: 12px; }
-  .section-title h2 { font-size: 26px; }
-  .hero { min-height: 400px; }
+
+@media (max-width: 480px) {
+  .nav { min-height: 68px; }
+
+  .logo img {
+    width: 125px;
+    height: 48px;
+  }
+
+  .nav > .btn {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .hero { min-height: 410px; }
+
   .hero-content { padding: 45px 0; }
-  .hero-points span { display: inline-block; margin: 5px; }
-  .footer-content { flex-direction: column; align-items: flex-start; }
+
+  .hero h1 { font-size: 42px; }
+
+  .hero p { font-size: 15px; }
+
+  .hero-points span {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .section-title h2 { font-size: 26px; }
+
+  .category { padding: 17px 8px; }
+
+  .category .emoji { font-size: 30px; }
+
+  .product-image {
+    height: 125px;
+    font-size: 55px;
+  }
+
+  .product-info { padding: 11px; }
+
+  .product h3 { font-size: 14px; }
+
+  .product p {
+    font-size: 12px;
+    min-height: 48px;
+  }
+
+  .price { font-size: 14px; }
+
+  .promo { padding: 24px; }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 </style>
 </head>
 
 <body>
+
+<!-- WEBSITE HEADER WITH YOUR LOGO -->
 <header>
   <div class="container nav">
+
     <a class="logo" href="#home">
-      🏃 JUNAID <span>SPORTS</span>
-      <small>PHALIA</small>
+      <img src="logo.jpg" alt="Junaid Sports Phalia Logo">
     </a>
 
     <nav>
@@ -233,70 +442,133 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="btn whatsapp wa-link" href="#" target="_blank" rel="noopener">
+    <a class="btn whatsapp wa-link" href="#">
       ☎ Order on WhatsApp
     </a>
+
   </div>
 </header>
 
 <main>
+
+<!-- HERO SECTION -->
 <section class="hero" id="home">
   <div class="container hero-content">
-    <div class="eyebrow">YOUR SPORTS PARTNER</div>
-    <h1>JUNAID SPORTS<br><span>PHALIA</span></h1>
+
+    <div class="eyebrow">YOUR SPORTS PARTNER IN PHALIA</div>
+
+    <h1>
+      JUNAID SPORTS<br>
+      <span>PLAY TO WIN.</span>
+    </h1>
+
     <p>
       Find the right gear for your game at Junaid Sports Phalia.
-      Explore sports equipment, footwear and accessories, then contact
-      us on WhatsApp to confirm prices and availability.
+      Explore sports equipment, cricket gear, footballs, shoes and
+      accessories. Contact us directly on WhatsApp to ask about
+      current prices and availability.
     </p>
+
     <div class="hero-actions">
-      <a class="btn whatsapp wa-link" href="#" target="_blank" rel="noopener">
+      <a class="btn whatsapp wa-link" href="#">
         ☎ Order on WhatsApp
       </a>
-      <a class="btn blue-btn" href="#products">Explore Products ↓</a>
+
+      <a class="btn blue-btn" href="#products">
+        Explore Products ↓
+      </a>
     </div>
+
     <div class="hero-points">
       <span>✓ Sports Essentials</span>
       <span>✓ Friendly Service</span>
       <span>✓ Shop in Phalia</span>
     </div>
+
   </div>
 </section>
 
+<!-- CATEGORIES -->
 <section id="categories">
   <div class="container">
+
     <div class="section-title">
       <h2>Shop by Category</h2>
-      <p>Find sports gear for your favourite game.</p>
+      <p>Everything you need for your favourite sport.</p>
     </div>
+
     <div class="categories">
-      <div class="category"><span class="emoji">🏏</span><strong>Cricket</strong><small>Bats, balls and kits</small></div>
-      <div class="category"><span class="emoji">⚽</span><strong>Football</strong><small>Footballs and gear</small></div>
-      <div class="category"><span class="emoji">🎾</span><strong>Tennis</strong><small>Rackets and balls</small></div>
-      <div class="category"><span class="emoji">🏸</span><strong>Badminton</strong><small>Rackets and shuttles</small></div>
-      <div class="category"><span class="emoji">👟</span><strong>Sports Shoes</strong><small>Footwear and training</small></div>
-      <div class="category"><span class="emoji">👕</span><strong>Sports Wear</strong><small>Clothing and kits</small></div>
-      <div class="category"><span class="emoji">🏋️</span><strong>Fitness</strong><small>Training equipment</small></div>
-      <div class="category"><span class="emoji">🎒</span><strong>Accessories</strong><small>Bags and accessories</small></div>
+
+      <div class="category">
+        <span class="emoji">🏏</span>
+        <strong>Cricket</strong>
+        <small>Bats, balls and kits</small>
+      </div>
+
+      <div class="category">
+        <span class="emoji">⚽</span>
+        <strong>Football</strong>
+        <small>Footballs and gear</small>
+      </div>
+
+      <div class="category">
+        <span class="emoji">🎾</span>
+        <strong>Tennis</strong>
+        <small>Rackets and balls</small>
+      </div>
+
+      <div class="category">
+        <span class="emoji">🏸</span>
+        <strong>Badminton</strong>
+        <small>Rackets and shuttles</small>
+      </div>
+
+      <div class="category">
+        <span class="emoji">👟</span>
+        <strong>Sports Shoes</strong>
+        <small>Footwear and training</small>
+      </div>
+
+      <div class="category">
+        <span class="emoji">👕</span>
+        <strong>Sports Wear</strong>
+        <small>Clothing and kits</small>
+      </div>
+
+      <div class="category">
+        <span class="emoji">🏋️</span>
+        <strong>Fitness</strong>
+        <small>Training equipment</small>
+      </div>
+
+      <div class="category">
+        <span class="emoji">🎒</span>
+        <strong>Accessories</strong>
+        <small>Bags and accessories</small>
+      </div>
+
     </div>
   </div>
 </section>
 
+<!-- PRODUCTS -->
 <section id="products" style="padding-top:0">
   <div class="container">
+
     <div class="section-title">
-      <h2>Featured Products</h2>
-      <p>Sample products. Update prices to match your shop's actual stock.</p>
+      <h2>Our Featured Products</h2>
+      <p>Contact us for current prices, sizes and availability.</p>
     </div>
 
     <div class="products">
+
       <article class="product">
         <div class="product-image">🏏</div>
         <div class="product-info">
           <h3>Cricket Bat</h3>
-          <p>Ask us about available sizes and quality.</p>
+          <p>Ask about available sizes and quality.</p>
           <div class="price">Price on request</div>
-          <a class="btn whatsapp product-order" data-product="Cricket Bat" href="#">☎ Ask on WhatsApp</a>
+          <a class="btn whatsapp product-order" data-product="Cricket Bat" href="#">Ask on WhatsApp</a>
         </div>
       </article>
 
@@ -306,7 +578,7 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
           <h3>Football</h3>
           <p>Ask about sizes and available designs.</p>
           <div class="price">Price on request</div>
-          <a class="btn whatsapp product-order" data-product="Football" href="#">☎ Ask on WhatsApp</a>
+          <a class="btn whatsapp product-order" data-product="Football" href="#">Ask on WhatsApp</a>
         </div>
       </article>
 
@@ -316,7 +588,7 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
           <h3>Sports Shoes</h3>
           <p>Message us to check sizes and colours.</p>
           <div class="price">Price on request</div>
-          <a class="btn whatsapp product-order" data-product="Sports Shoes" href="#">☎ Ask on WhatsApp</a>
+          <a class="btn whatsapp product-order" data-product="Sports Shoes" href="#">Ask on WhatsApp</a>
         </div>
       </article>
 
@@ -326,7 +598,7 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
           <h3>Tennis Racket</h3>
           <p>Ask about available models and prices.</p>
           <div class="price">Price on request</div>
-          <a class="btn whatsapp product-order" data-product="Tennis Racket" href="#">☎ Ask on WhatsApp</a>
+          <a class="btn whatsapp product-order" data-product="Tennis Racket" href="#">Ask on WhatsApp</a>
         </div>
       </article>
 
@@ -336,7 +608,7 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
           <h3>Badminton Set</h3>
           <p>Ask about rackets and shuttlecocks.</p>
           <div class="price">Price on request</div>
-          <a class="btn whatsapp product-order" data-product="Badminton Set" href="#">☎ Ask on WhatsApp</a>
+          <a class="btn whatsapp product-order" data-product="Badminton Set" href="#">Ask on WhatsApp</a>
         </div>
       </article>
 
@@ -346,7 +618,7 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
           <h3>Sports Gloves</h3>
           <p>Check available sizes and styles.</p>
           <div class="price">Price on request</div>
-          <a class="btn whatsapp product-order" data-product="Sports Gloves" href="#">☎ Ask on WhatsApp</a>
+          <a class="btn whatsapp product-order" data-product="Sports Gloves" href="#">Ask on WhatsApp</a>
         </div>
       </article>
 
@@ -356,7 +628,7 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
           <h3>Sports Bag</h3>
           <p>Ask about bag styles and sizes.</p>
           <div class="price">Price on request</div>
-          <a class="btn whatsapp product-order" data-product="Sports Bag" href="#">☎ Ask on WhatsApp</a>
+          <a class="btn whatsapp product-order" data-product="Sports Bag" href="#">Ask on WhatsApp</a>
         </div>
       </article>
 
@@ -366,35 +638,47 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
           <h3>Fitness Equipment</h3>
           <p>Contact us for current availability.</p>
           <div class="price">Price on request</div>
-          <a class="btn whatsapp product-order" data-product="Fitness Equipment" href="#">☎ Ask on WhatsApp</a>
+          <a class="btn whatsapp product-order" data-product="Fitness Equipment" href="#">Ask on WhatsApp</a>
         </div>
       </article>
+
     </div>
   </div>
 </section>
 
+<!-- WHATSAPP PROMOTION -->
 <section style="padding-top:0">
   <div class="container">
+
     <div class="promo">
       <div>
         <h2>Ready to order your sports gear?</h2>
-        <p>Message us on WhatsApp to ask about products, prices and availability.</p>
+        <p>
+          Message us on WhatsApp to ask about products, prices
+          and availability.
+        </p>
       </div>
-      <a class="btn whatsapp wa-link" href="#" target="_blank" rel="noopener">
+
+      <a class="btn whatsapp wa-link" href="#">
         Chat with us on WhatsApp
       </a>
     </div>
+
   </div>
 </section>
 
+<!-- ABOUT AND CONTACT -->
 <section id="about" style="padding-top:0">
   <div class="container info-grid">
+
     <div class="info-card">
       <h3>About Junaid Sports Phalia</h3>
       <p>
-        Welcome to Junaid Sports Phalia. Browse our sports products and
-        contact us directly for current stock, prices and product details.
-        We look forward to helping you find the right equipment for your game.
+        Welcome to Junaid Sports Phalia, your local destination for
+        sports equipment and accessories. Browse our product catalogue
+        and contact us directly to confirm stock, prices and product
+        details. We look forward to helping you find the right gear
+        for your game.
       </p>
     </div>
 
@@ -402,37 +686,53 @@ footer p { color: #b7cadd; font-size: 13px; line-height: 1.6; }
       <h3>Contact & Location</h3>
       <p><strong>Shop:</strong> Junaid Sports Phalia</p>
       <p><strong>Location:</strong> Phalia, Mandi Bahauddin, Punjab, Pakistan</p>
-      <p><strong>Phone:</strong> Please add your shop's phone number</p>
-      <p><strong>Opening hours:</strong> Please add your shop timings</p>
-      <a class="btn whatsapp wa-link" href="#" target="_blank" rel="noopener">
+      <p><strong>Phone:</strong> Add your business phone number</p>
+      <p><strong>Opening hours:</strong> Add your shop timings</p>
+
+      <a class="btn whatsapp wa-link" href="#">
         Contact on WhatsApp
       </a>
     </div>
+
   </div>
 </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="container footer-content">
-    <div class="logo">🏃 JUNAID <span>SPORTS</span><small>PHALIA</small></div>
+
+    <a class="logo" href="#home">
+      <img src="logo.jpg" alt="Junaid Sports Phalia Logo">
+    </a>
+
     <div>
       <strong>Play Better. Live Healthier.</strong>
-      <p>Sports equipment and accessories in Phalia, Pakistan.<br>
-      © <span id="year"></span> Junaid Sports Phalia</p>
+      <p>
+        Sports equipment and accessories in Phalia, Pakistan.<br>
+        © <span id="year"></span> Junaid Sports Phalia
+      </p>
     </div>
+
   </div>
 </footer>
 
-<a class="btn whatsapp floating-whatsapp wa-link" href="#" target="_blank" rel="noopener">
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="btn whatsapp floating-whatsapp wa-link" href="#">
   ☎ WhatsApp
 </a>
 
 <script>
-/* IMPORTANT:
-   Replace 92XXXXXXXXXX with your Pakistan WhatsApp number.
-   Use country code 92, then your mobile number without the first zero.
-   Example only: 0300 1234567 becomes 923001234567.
+/*
+IMPORTANT:
+Replace 92XXXXXXXXXX with your actual Pakistan WhatsApp number.
+Use country code 92, without the plus sign or the first zero.
+
+Example only:
+03001234567 becomes 923001234567
 */
+
 const WHATSAPP_NUMBER = "92XXXXXXXXXX";
 
 function makeWhatsAppLink(message) {
@@ -440,41 +740,50 @@ function makeWhatsAppLink(message) {
     "?text=" + encodeURIComponent(message);
 }
 
-function configureWhatsAppLinks() {
-  const validNumber = /^\d{10,15}$/.test(WHATSAPP_NUMBER) &&
-                      !WHATSAPP_NUMBER.includes("X");
+const validNumber =
+  /^\d{10,15}$/.test(WHATSAPP_NUMBER) &&
+  !WHATSAPP_NUMBER.includes("X");
 
-  document.querySelectorAll(".wa-link").forEach(function(link) {
-    link.href = validNumber
-      ? makeWhatsAppLink("Assalam-o-Alaikum, I want to ask about products at Junaid Sports Phalia.")
-      : "#contact";
-
+document.querySelectorAll(".wa-link").forEach(function(link) {
+  if (validNumber) {
+    link.href = makeWhatsAppLink(
+      "Assalam-o-Alaikum, I want to ask about products at Junaid Sports Phalia."
+    );
+    link.target = "_blank";
+    link.rel = "noopener";
+  } else {
+    link.href = "#contact";
     link.addEventListener("click", function(event) {
-      if (!validNumber) {
-        event.preventDefault();
-        alert("Please add your WhatsApp number in the code first. Find WHATSAPP_NUMBER near the bottom of index.html.");
-      }
+      event.preventDefault();
+      alert("Please add your WhatsApp number in the code near the bottom of index.html.");
+      document.getElementById("contact").scrollIntoView();
     });
-  });
+  }
+});
 
-  document.querySelectorAll(".product-order").forEach(function(link) {
-    const productName = link.dataset.product;
-    link.href = validNumber
-      ? makeWhatsAppLink("Assalam-o-Alaikum, I am interested in " +
-          productName + " from Junaid Sports Phalia. Please share its price and availability.")
-      : "#contact";
+document.querySelectorAll(".product-order").forEach(function(link) {
+  const productName = link.dataset.product;
 
+  if (validNumber) {
+    link.href = makeWhatsAppLink(
+      "Assalam-o-Alaikum, I am interested in " + productName +
+      " from Junaid Sports Phalia. Please share its price and availability."
+    );
+    link.target = "_blank";
+    link.rel = "noopener";
+  } else {
+    link.href = "#contact";
     link.addEventListener("click", function(event) {
-      if (!validNumber) {
-        event.preventDefault();
-        alert("Please add your WhatsApp number in the code first. Find WHATSAPP_NUMBER near the bottom of index.html.");
-      }
+      event.preventDefault();
+      alert("Please add your WhatsApp number in the code near the bottom of index.html.");
+      document.getElementById("contact").scrollIntoView();
     });
-  });
-}
+  }
+});
 
-configureWhatsAppLinks();
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
+
 </body>
 </html>
