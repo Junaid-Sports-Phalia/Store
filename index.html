@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Junaid Sports Phalia | Play to Win</title>
-<meta name="description" content="Shop sports equipment, cricket bats, footballs, shoes and sports accessories at Junaid Sports Phalia. Order through WhatsApp.">
+<meta name="description" content="Shop sports equipment at Junaid Sports Phalia. Order through WhatsApp.">
 
 <style>
 :root {
@@ -36,10 +36,15 @@ a {
     color: inherit;
 }
 
-button { font: inherit; cursor: pointer; }
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* COLORFUL TOP LINE */
 
 .topbar {
-    background: linear-gradient(90deg, #071b49, #0759c7, #00a8ff, #0759c7, #071b49);
+    background: linear-gradient(90deg, #071746, #0759c7, #00b7ff, #0759c7, #071746);
     color: white;
     text-align: center;
     padding: 9px 12px;
@@ -48,19 +53,20 @@ button { font: inherit; cursor: pointer; }
     letter-spacing: 1px;
 }
 
-/* COLORFUL HEADER */
+/* COLORFUL NAVIGATION HEADER */
 
 header {
-    background: linear-gradient(110deg, #ffffff, #e4f2ff, #ffffff);
-    border-bottom: 3px solid #0785f5;
-    box-shadow: 0 4px 16px rgba(0, 45, 110, .15);
     position: sticky;
     top: 0;
     z-index: 100;
+    background: linear-gradient(110deg, #06295f, #0759c7, #087cf0, #063d91);
+    border-bottom: 3px solid #52d5ff;
+    box-shadow: 0 5px 18px rgba(0, 30, 100, .3);
 }
 
 .navbar {
-    max-width: 1250px;
+    max-width: 1300px;
+    min-height: 95px;
     margin: auto;
     padding: 10px 22px;
     display: flex;
@@ -69,40 +75,63 @@ header {
     gap: 20px;
 }
 
+/* BIGGER LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
 .logo img {
-    width: 195px;
-    height: 70px;
+    width: 225px;
+    height: 78px;
     object-fit: contain;
     display: block;
-    mix-blend-mode: multiply;
+
+    /* Helps blend a white logo background into the blue header */
+    mix-blend-mode: screen;
+    background: transparent;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 24px;
+    justify-content: center;
+    gap: 19px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
+    color: white;
     font-size: 14px;
     font-weight: bold;
-    color: #073775;
-    transition: color .2s;
+    padding: 9px 0;
+    border-bottom: 2px solid transparent;
+    transition: .2s;
 }
 
-.nav-links a:hover { color: #008cff; }
+.nav-links a:hover {
+    color: #9ceaff;
+    border-bottom-color: #9ceaff;
+}
 
 .nav-order {
-    background: linear-gradient(135deg, #0759c7, #008cff);
-    color: white;
-    padding: 11px 18px;
-    border-radius: 7px;
+    background: linear-gradient(135deg, #00c6ff, #67e8ff);
+    color: #06234d;
+    padding: 11px 16px;
+    border-radius: 8px;
     font-weight: bold;
-    font-size: 14px;
-    box-shadow: 0 3px 9px #0759c733;
+    font-size: 13px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,.18);
 }
 
-/* HERO BACKGROUND */
+.nav-order:hover {
+    background: white;
+}
+
+/* WELCOME BOX */
 
 .hero {
     min-height: 440px;
@@ -369,7 +398,7 @@ header {
 
 .about-text p { color: #59677d; margin-bottom: 12px; }
 
-/* LOCATION */
+/* LOCATION CARD, NOW LINKED FROM TOP NAVIGATION */
 
 .location-section {
     background: linear-gradient(135deg, #e5f2ff, #ffffff);
@@ -441,12 +470,7 @@ header {
 }
 
 .contact-section h2 { font-size: 32px; }
-
-.contact-section p {
-    color: #d2e0f4;
-    margin: 10px auto 20px;
-}
-
+.contact-section p { color: #d2e0f4; margin: 10px auto 20px; }
 .contact-section .btn { margin: 5px; }
 
 /* FOOTER */
@@ -459,14 +483,13 @@ footer {
 }
 
 footer img {
-    width: 165px;
-    height: 65px;
+    width: 175px;
+    height: 70px;
     object-fit: contain;
-    background: white;
-    mix-blend-mode: normal;
-    border-radius: 5px;
-    padding: 4px;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 10px;
+    mix-blend-mode: screen;
+    background: transparent;
 }
 
 footer p { font-size: 13px; color: #c4d1e4; }
@@ -504,104 +527,48 @@ footer p { font-size: 13px; color: #c4d1e4; }
     font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
-@media (max-width: 850px) {
-    .nav-links { gap: 13px; }
-
-    .category-grid,
-    .product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
+@media (max-width: 950px) {
+    .navbar { flex-wrap: wrap; justify-content: center; }
+    .nav-links { gap: 17px; }
+    .category-grid, .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .benefits { margin: 20px 12px; }
     .about-box { grid-template-columns: 1fr; }
-    .logo img { width: 165px; }
-
-    .location-card {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+    .location-card { align-items: flex-start; flex-direction: column; }
 }
 
 @media (max-width: 560px) {
-    .navbar {
-        padding: 10px 14px;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .logo img {
-        width: 140px;
-        height: 54px;
-    }
-
-    .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 17px;
-        padding: 8px 0 3px;
-        border-top: 1px solid #d5e8ff;
-    }
-
+    .navbar { padding: 10px 12px; gap: 10px; }
+    .logo img { width: 175px; height: 65px; }
+    .nav-links { width: 100%; gap: 13px; }
     .nav-links a { font-size: 12px; }
+    .nav-order { padding: 9px 12px; font-size: 12px; }
 
-    .nav-order {
-        padding: 9px 12px;
-        font-size: 12px;
-    }
-
-    .hero {
-        min-height: 390px;
-        padding: 45px 15px;
-        background-position: center;
-    }
-
+    .hero { min-height: 390px; padding: 45px 15px; }
     .hero h1 { letter-spacing: 1px; }
-
-    .hero h2 {
-        letter-spacing: 3px;
-        padding: 8px 14px;
-    }
-
+    .hero h2 { letter-spacing: 3px; padding: 8px 14px; }
     .hero p { font-size: 14px; }
 
-    .btn {
-        padding: 11px 15px;
-        font-size: 13px;
-    }
-
+    .btn { padding: 11px 15px; font-size: 13px; }
     .benefit { padding: 15px 5px; }
     .benefit h3 { font-size: 12px; }
     .benefit p { font-size: 10px; }
 
-    .category-grid,
-    .product-grid { gap: 12px; }
-
+    .category-grid, .product-grid { gap: 12px; }
     .category-card { padding: 18px 8px; }
     .category-icon { font-size: 38px; }
     .category-card h3 { font-size: 14px; }
 
-    .product-image {
-        height: 125px;
-        font-size: 55px;
-    }
-
+    .product-image { height: 125px; font-size: 55px; }
     .product-info { padding: 12px; }
     .product-info h3 { font-size: 14px; }
     .product-info p { font-size: 12px; }
 
-    .product-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
+    .product-bottom { align-items: flex-start; flex-direction: column; }
     .order-btn { width: 100%; }
 
-    .section,
-    .products-inner { padding: 32px 14px; }
-
+    .section, .products-inner { padding: 32px 14px; }
     .location-section { padding: 32px 14px; }
     .location-card { padding: 22px 17px; }
     .location-info { align-items: flex-start; gap: 12px; }
@@ -609,11 +576,7 @@ footer p { font-size: 13px; color: #c4d1e4; }
     .location-info h2 { font-size: 21px; }
     .map-btn { width: 100%; }
 
-    .whatsapp-float {
-        bottom: 13px;
-        right: 12px;
-        padding: 11px 14px;
-    }
+    .whatsapp-float { bottom: 13px; right: 12px; padding: 11px 14px; }
 }
 </style>
 </head>
@@ -636,7 +599,7 @@ footer p { font-size: 13px; color: #c4d1e4; }
             <a href="#categories">Categories</a>
             <a href="#products">Products</a>
             <a href="#about">About Us</a>
-            <a href="#location">Location</a>
+            <a href="#location">📍 Location</a>
         </div>
 
         <a class="nav-order" href="#contact">Contact Us</a>
@@ -644,7 +607,7 @@ footer p { font-size: 13px; color: #c4d1e4; }
     </nav>
 </header>
 
-<!-- WELCOME BOX -->
+<!-- WELCOME BOX WITH background.jpg -->
 
 <section class="hero" id="home">
     <div class="hero-content">
@@ -673,7 +636,6 @@ footer p { font-size: 13px; color: #c4d1e4; }
 <!-- BENEFITS -->
 
 <div class="benefits">
-
     <div class="benefit">
         <div class="icon">🏆</div>
         <h3>Sports Essentials</h3>
@@ -691,20 +653,17 @@ footer p { font-size: 13px; color: #c4d1e4; }
         <h3>Easy Ordering</h3>
         <p>Order directly on WhatsApp</p>
     </div>
-
 </div>
 
 <!-- CATEGORIES -->
 
 <section class="section" id="categories">
-
     <div class="section-heading">
         <h2>Shop By Category</h2>
         <p>Find equipment for your favourite sport.</p>
     </div>
 
     <div class="category-grid">
-
         <a class="category-card" href="#products">
             <div class="category-icon">🏏</div>
             <h3>Cricket</h3>
@@ -728,16 +687,13 @@ footer p { font-size: 13px; color: #c4d1e4; }
             <h3>Sports Shoes</h3>
             <p>Footwear for your game</p>
         </a>
-
     </div>
 </section>
 
 <!-- PRODUCTS -->
 
 <section class="products-section" id="products">
-
     <div class="products-inner">
-
         <div class="section-heading">
             <h2>Popular Sports Products</h2>
             <p>Choose a product and ask us about its price and availability.</p>
@@ -848,7 +804,6 @@ footer p { font-size: 13px; color: #c4d1e4; }
 <!-- ABOUT US -->
 
 <section class="section" id="about">
-
     <div class="about-box">
 
         <div class="about-art">
@@ -859,43 +814,38 @@ footer p { font-size: 13px; color: #c4d1e4; }
 
         <div class="about-text">
             <h2>Your Sports Shop in Phalia</h2>
-
             <p>
                 Welcome to Junaid Sports Phalia, your destination
                 for sports equipment and accessories.
             </p>
-
             <p>
                 Whether you enjoy cricket, football, badminton
                 or fitness, contact us to ask about our products
                 and find the right equipment for your game.
             </p>
-
             <p>
                 Browse our products and order conveniently through
                 WhatsApp.
             </p>
-
             <a class="btn btn-primary" href="#contact">Get In Touch</a>
         </div>
 
     </div>
 </section>
 
-<!-- CLICKABLE LOCATION SECTION -->
+<!-- LOCATION: LINKED IN TOP NAVIGATION -->
 
 <section class="location-section" id="location">
-
     <div class="location-card">
 
         <div class="location-info">
             <div class="location-icon">📍</div>
-
             <div>
                 <h2>Visit Junaid Sports Phalia</h2>
                 <p>
                     Find our shop in Phalia, Punjab, Pakistan.
-                    Click below to open Google Maps and check the location.
+                    Open Google Maps to view the search results
+                    and select the correct shop location.
                 </p>
             </div>
         </div>
@@ -904,19 +854,16 @@ footer p { font-size: 13px; color: #c4d1e4; }
            href="https://www.google.com/maps/search/?api=1&query=Junaid+Sports+Phalia+Punjab+Pakistan"
            target="_blank"
            rel="noopener noreferrer">
-           📍 Open Location
+           📍 Open Google Maps
         </a>
 
     </div>
-
 </section>
 
 <!-- CONTACT -->
 
 <section class="contact-section" id="contact">
-
     <h2>Ready to Play to Win?</h2>
-
     <p>
         Contact Junaid Sports Phalia to ask about products,
         prices and availability.
@@ -930,13 +877,11 @@ footer p { font-size: 13px; color: #c4d1e4; }
     </a>
 
     <p>WhatsApp: +92 343 5651255</p>
-
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-
     <a href="#home">
         <img src="logo.jpg" alt="Junaid Sports Logo">
     </a>
@@ -963,7 +908,6 @@ footer p { font-size: 13px; color: #c4d1e4; }
     <div class="copyright">
         <p>© <span id="year"></span> Junaid Sports Phalia. All rights reserved.</p>
     </div>
-
 </footer>
 
 <!-- FLOATING WHATSAPP BUTTON -->
